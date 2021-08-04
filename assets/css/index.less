@@ -286,224 +286,15 @@
 
 // team
 .team{
-    background: #000;
-    color: #fff;
-    padding: 5em 0 2em;
-    .subject{
-        text-align: center;
-        background: url(../images/but.png) no-repeat bottom center;
-        padding-bottom: 1.5em;
-        margin-bottom: 8em;
-        .title{
-            font-family: OSLight;
-            font-size: 3em;
-            text-transform: uppercase;
-            span{
-                font-family: OSBold;
-            }
-        }
-    }
-
-
-    .infolist{
-        position: relative;
-        height:30em;
-        width:80%;
-        margin:0 auto;
-        input{
-        display: none;
-        }
-        input:checked + .list{
-        opacity: 1;
-        z-index:1;
-
-        }
-
-        #list1:checked ~ .mores label[for="list1"],
-        #list2:checked ~ .mores label[for="list2"],
-        #list3:checked ~ .mores label[for="list3"]{
-        background-color:#fcac45;
-        }
-        .list{
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 4em;
-            position: absolute;
-            top: 0;
-            left: 0;
-        
-
-            transition: all linear .5s;
-
-                .item{
-                    width: 20%;
-                    text-align: center;
-                    .thumb{
-                        border-radius: 100%;
-                        overflow: hidden;
-                        margin-bottom: 1.5em;
-                        cursor: pointer;
-                        transition: all linear .3s;
-                        img{
-                            width: 100%;
-                        }
-                        
-
-                        &:hover{
-                            transform: translateY(-10px) scale(1.2);
-
-                        }
-                    }
-
-
-                    .content{
-                        .name{
-                            font-family:OSBold;
-                            font-size:1.3em;
-                        }
-
-                        .job{
-                            display: inline-block;
-                            font-family: OSLight;
-                            font-size: 1.1em;
-                            margin-bottom: 1em;
-                        }
-                        .info{
-                            font-family:OSLight ;
-                        }
-                    }
-                }
-        }
-        .mores{
-            position: absolute;
-            width:100%;
-            bottom:0;
-            left:0;
-            .more{
-      
-                display: flex;
-                width: 20%;
-                justify-content: space-around;
-                margin: 0 auto;
-                label{
-                    display: inline-block;
-                    width: .8em;
-                    height: .8em;
-                    background: #fff;
-                    cursor: pointer;
-                    transition:all linear .3s;
-                }
-                label:hover{
-                    background-color: coral;
-                }
-        
-            }
-        }
-    
-    }
-
-
-
-
-
-
-    @media screen and(max-width:1450px) {
-        .more{
-            width: 12%;
-        }
-    }
-
-    @media screen and(max-width:710px) {
-        &{
-
-            .infolist{
-                height: 90vh;
-                .list{
-                    flex-wrap: wrap;
-                    .item{
-                        width: 100%;
-                        display: flex;
-                        justify-content: space-between;
-                        margin-bottom: 2em;
-    
-                        .thumb{
-                            width: 20%;
-                            border-radius: 3px;
-                            margin-bottom: 0;
-                            margin-right: 1em;
-                            flex-shrink: 0;
-                        }
-                        .content{
-                            text-align: left;
-                            display: flex;
-                            flex-wrap: wrap;
-                            align-content: space-between;
-                            *{
-                                width: 100%;
-                            }
-                            .job{
-                                margin-bottom: 0;
-                            }
-                        }
-    
-                    }
-                }
-                .mores{
-                    .mors{
-                        width: 15%;
-                    }
-                }
-            }
-
-        }
-    }
-
-    @media screen and(max-width:500px) {
-        &{
-            .list{
-                .item{
-                    .thumb{
-                        width: 30%;
-                    }
-                }
-            }
-        }
-    }
-
-    @media screen and(max-width:480px) {
-        &{
-            .subject{
-                margin-bottom: 5em;
-                .title{
-                    font-size: 2em;
-                }
-            }
-            .list{
-                margin-bottom: 2em;
-                .item{
-                    .thumb{
-                        width: 43%;
-                    }
-                }
-            }
-            .more{
-                width: 25%;
-            }
-        }
-        
-    }
-}
-
-
-/* services */
-.services{
+    background:#070707;
+    color:#fff;
     padding:5em 0em 2em;
 
     .subject{
         text-align: center;
         background:url('../images/title_background.png') no-repeat bottom center;
         padding-bottom:1.5em;
-        margin-bottom:2em;
+        margin-bottom:8em;
 
         .title{
             font-family: OSLight;
@@ -516,115 +307,155 @@
         }
     }
 
-    .info{
-        width: 95%;
-        margin: 0 auto;
-        color: #636363;
-        font-family: OSLtalic;
-        font-size: 1.1em;
-        text-align: center;
-        line-height: 1.7em;
-    }
+    .infolist{
+        position: relative;
+        height:30em;
+        width:80%;
+        margin:0 auto;
+
+        input{
+            display: none;
+        }
+
+        input:checked + .list1{
+            opacity: 1;
+            z-index:1;
+
+        }
+
+        #item1:checked ~ .morebox label[for="item1"],
+        #item2:checked ~ .morebox label[for="item2"],
+        #item3:checked ~ .morebox label[for="item3"]{
+            background-color:#fcac45;
+        }
+
+        .list1{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom:4em;
     
-
-    .list{
-        display: flex;
-        justify-content: space-around;
-        margin-bottom:4em;
-
-        .item{
-            width:25%;
-            text-align: center;
-            transition:all linear .3s;
-
-            .thumb{
-                width: 50%;
-                overflow:hidden;
-                border: 5px solid #fcac45;
-                border-radius: 50%;
-                margin: 0 auto;
-                margin-bottom:1.5em;
-
-                img{
-                    width:100%;
-                    background-color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            .item{
+                width:20%;
+                text-align: center;
+    
+                .thumb{
+                    border-radius: 100%;
+                    overflow:hidden;
+                    margin-bottom:1.5em;
+    
+                    img{
+                        width:100%;
+                    }
+    
+                    transition:all linear .3s;
+                }      
+    
+                .content{
+                    .name{
+                        font-family: OSBold;
+                        font-size:1.3em;
+                    }
+    
+                    .job{
+                        display: inline-block;
+                        font-family: OSLight;
+                        font-size:1.1em;
+                        margin-bottom:1em;
+                    }
+    
+                    .info{
+                        font-family: OSLight;
+                    }
                 }
             }
+        } 
+        
+        .morebox{
+            position: absolute;
+            width:100%;
+            bottom:0;
+            left:0;
 
-            .content{
-                .name{
-                    font-family: OSBold;
-                    font-size:1.3em;
+            .more{
+                display: flex;
+                width:8%;
+                justify-content: space-around;
+                margin:0 auto;
+        
+                label{
+                    display: inline-block;
+                    width:.8em;
+                    height:.8em;
+                    background-color:#fff;
+                    cursor: pointer;
+                    transition:all linear .3s;
                 }
-
-                .info{
-                    font-family: OSLight;
-                }
-
-                &:hover{
-                    background-color: #fcac45;
+        
+                label:hover{
+                    background-color:#fcac45;
                 }
             }
         }
-
     }
 
-    @media screen and (max-width:800px){
+    @media screen and (max-width:700px){
         &{
-            .list{
-                flex-wrap: wrap;
+            .infolist{
+                height: 40em;
+                .list1{
+                    flex-wrap: wrap;
 
-                .item{
-                    width:100%;
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 3em;
-                    align-items: flex-start;
-
-                    .thumb{
-                        width:19%;
-                        border-radius: 0%;
-                        margin-right:1em;
-                        flex-shrink: 0;
-                    }
-
-                    .content{
-                        text-align: left;
+                    .item{
+                        width:100%;
                         display: flex;
-                        flex-wrap: wrap;
-                        align-content: space-between;
+                        justify-content: space-between;
+                        margin-bottom: 2em;
 
-                        .name{
-                            font-size: 1.5em;
+                        .thumb{
+                            width:20%;
+                            border-radius: 3px;
+                            margin-bottom: 0;
+                            margin-right:1em;
+                            flex-shrink: 0;
                         }
 
-                        .info{
+                        .content{
                             text-align: left;
-                            font-size: 1.3em;
-                        }
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-content: space-between;
 
-                        *{
-                            width:100%;
+                            *{
+                                width:100%;
+                            }
+
+                            .job{
+                                margin-bottom: 0;
+                            }
                         }
+                    }
+                }
+
+                .morebox{
+                    .more{
+                        width: 13%;
                     }
                 }
             }
         }
     }
 
-    @media screen and (max-width:560px) {
+    @media screen and (max-width:500px){
         &{
-            .list{
-                .item{
-                    height: 9em;
-                    .thumb{
-                        width:20%;
-                        border-radius: 5%;
-                    }
-
-                    .content{
-                        .info{
-                            font-size: 1.2em;
+            .infolist{
+                .list1{
+                    .item{
+                        .thumb{
+                            width:30%;
                         }
                     }
                 }
@@ -639,25 +470,47 @@
                 margin-bottom:5em;
 
                 .title{
-                    font-size:1.4em;        
-                }
-            }
-            
-            .list{
-                margin-bottom:2em;
-                .item{
-                    .thumb{
-                        width:30%;
-                    }
+                    font-size:2em;        
                 }
             }
 
-            .more{
-                width:35%;
+            .infolist{
+                height: 47em;
+
+                .list1{
+                    margin-bottom:2em;
+
+                    .item{
+                        .content{
+                            .name{
+                                font-size: 1.1em;
+                            }
+
+                            .job{
+                                font-size: 0.9em;
+                            }
+
+                            .info{
+                                font-size: 0.4em;
+                            }
+                        }
+
+                        .thumb{
+                            width:43%;
+                        }
+                    }
+                }
+                .morebox{
+                    .more{
+                        width: 30%;
+                    }
+                }
             }
         }
     }
 }
+
+
 // services
 .services{
     .subject{
@@ -764,116 +617,163 @@
 
 // clients
 .clients{
-    background: #000;
+    background:#070707;
+    color:#fff;
+    padding:5em 0em 2em;
+
     .subject{
         text-align: center;
-        background: url(../images/but.png) no-repeat bottom center;
+        background:url('../images/title-background.png') no-repeat bottom center;
         padding-bottom:1.5em;
-        margin-bottom: 3em;
+        margin-bottom:6em;
+
         .title{
             font-family: OSLight;
-            font-size: 3em;
-            text-transform:uppercase ;
+            font-size:3em;
+            text-transform: uppercase;
+
             span{
-                font-family:OSBold ;
+                font-family: OSBold;
             }
         }
     }
-    .infolist{
+
+    .flexlist{
         position: relative;
-        height: 15em;
-        width: 80%;
-        margin: 0 auto;
+        height:15em;
+        width:80%;
+        margin:0 auto;
+
         input{
             display: none;
         }
-        input:checked + .info{
+
+        input:checked + .flex{
             opacity: 1;
-            z-index: 1;
+            z-index:1;
+
         }
 
-        #info1:checked ~ .morebox label[for="info1"],#info2:checked ~ .morebox label[for="info2"],#info3:checked ~ .morebox label[for="info3"]{
-            background: #fcac45;
-        }
-        .images{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
+        #flex1:checked ~ .morebox label[for="flex1"],#flex2:checked ~ .morebox label[for="flex2"],#flex3:checked ~ .morebox label[for="flex3"]{
+            background-color:#fcac45;
         }
 
-        .info{
+        .flex{
             position: absolute;
-            top: 0;
-            width: 100%;
+            top:0;
+            width:100%;
             text-align: center;
             text-transform: uppercase;
             opacity: 0;
-            z-index: -1;
+            z-index:-1;
 
-            transition: all linear .5s;
+            transition:all linear .3s;
+        }
 
-            .content{
-                color: #fff;
-                font-family: OSBold;
-                font-size: 1.2em;
-                margin-bottom: 2em;
-            }
+        .morebox{
+            position: absolute;
+            width:100%;
+            bottom:0;
+            left:0;
 
-            .name{
-                font-family: OSLight;
-                color: #999;
-                font-size: 1.1em;
-                span{
-                    font-family: OSBold;
+            .more{
+                display: flex;
+                width:6%;
+                justify-content: space-around;
+                margin:0 auto;
+        
+                label{
+                    display: inline-block;
+                    width:.8em;
+                    height:.8em;
+                    background-color:#fff;
+                    cursor: pointer;
+                    transition:all linear .3s;
+                }
+        
+                label:hover{
+                    background-color:#fcac45;
                 }
             }
         }
 
 
-    .morebox{
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        .mede{
-            display: flex;
-            width: 12%;
-            justify-content: space-around;
-            margin: 0 auto;
-
-            label{
-                display: inline-block;
-                width: .8em;
-                height: .8em;
-                background-color: #fff;
-                cursor: pointer;
-                transition: all linear .3s;
-            }
-            label:hover{
-                background-color: darkgoldenrod;
-            }
-        }
+        
     }
 
-    }
-
-    @media screen and(max-width:420px) {
-        .subject{
-            .title{
-                font-size: 2em;
-            }
-        }
-        .infolist{
-            .morebox{
-                .mede{
-                    width: 25%;
+    @media screen and (max-width:1000px){
+        &{
+            .flexlist{
+                .morebox{
+                    .more{
+                        width:7vw;
+                    }
                 }
             }
         }
+    }
 
+    @media screen and (max-width:550px){
+        &{
+            .subject{
+                margin-bottom:3em;
+
+                .title{
+                    font-size:1.5em;
+                }
+            }
+            .flexlist{
+                height:17em;
+
+                .morebox{
+                    .more{
+                        width:10vw;
+                    }
+                }
+            }
+        }
+    }
+
+    // iphone5/iphoneSE
+    @media screen and (max-width:470px){
+        &{
+            .flexlist{
+                width:100%;
+
+                .flex{
+                    .content{
+                        height:7em;
+                        overflow-y: scroll;
+    
+                        /*修改滚动条样式*/
+                        &::-webkit-scrollbar {
+                            width: 20px;
+                            height: 8px;
+                        }
+                        
+                        &::-webkit-scrollbar-thumb {
+                            border-radius: 12px;
+                            border: 8px solid rgba(0, 0, 0, 0);
+                            box-shadow: 8px 0 0 #A5ADB7 inset;
+                            box-shadow: 8px 0 0 rgba(175, 35, 35, 0.5) inset;
+                        }
+                        
+                        &::-webkit-scrollbar-thumb:hover {
+                            box-shadow: 8px 0 0 rgb(184, 39, 39) inset;
+                        }
+                    }
+                    
+                }
+
+                .morebox{
+                    .more{
+                        width:15vw;
+                    }
+                }
+            }
+        }
     }
 }
-
 
 
 // work
@@ -973,7 +873,7 @@
                             font-weight: bold;
                             font-size: 1.3em;
                             color: #fff;
-                            margin-bottom: .6em;
+                            margin-bottom: 1em;
                         }
                         span{
                             color: #cccccc;
@@ -982,11 +882,22 @@
                         .add{
                             width: 4em;
                             height: 4em;
-                            border: 3px solid rgb(124, 116, 9);
+                            border: 4px solid rgb(236, 223, 40);
                             border-radius: 100%;
                             margin: 0 auto;
-                            line-height: 4em;
-                            margin-top: .5em;
+                            line-height: 3.5em;
+                            margin-top: 1em;
+                            display: block;
+                            transition: all linear .5s;
+                            a{
+                                text-decoration: none;
+                                font-size: 1.5em;
+                                color: rgb(236, 223, 40);
+                                text-shadow: 0 0 5px 0 #cccccc;
+                            }
+                        &:hover{
+                            transform: translateY(-5px);
+                        }    
                         }
                     }
 
@@ -1100,6 +1011,7 @@
             text-transform: uppercase;     
                 span{
                 font-family: OSBold;
+                color: #fff;
        
                 }      
             }
